@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.google.gms.google.services)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core-ktx)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -51,7 +51,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.lifecycle.viewmodel-compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // Firebase
     implementation(platform(libs.firebase.bom))
@@ -61,8 +61,8 @@ dependencies {
 
     // AI & Media
     implementation(libs.generativeai)
-    implementation(libs.coil-compose)
-    implementation(libs.lottie-compose)
+    implementation(libs.coil.compose)
+    implementation(libs.lottie.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
