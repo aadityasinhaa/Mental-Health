@@ -72,3 +72,10 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
+
+// Android modules don't expose Java's `testClasses` task; some IDE workflows still invoke it.
+tasks.register("testClasses") {
+    group = "verification"
+    description = "Compatibility task that compiles debug unit test classes."
+    dependsOn("compileDebugUnitTestSources")
+}
